@@ -1,28 +1,3 @@
-// The MIT License (MIT)
-
-// Copyright (c) 2019 Ashish Kumar
-
-//  Permission is hereby granted, free of charge, to any person obtaining a
-//  copy of this software and associated documentation files (the "Software"),
-//  to deal in the Software without restriction, including without limitation
-//  the rights to use, copy, modify, merge, publish, distribute, sublicense,
-//  and/or sell copies of the Software, and to permit persons to whom the
-//  Software is furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in
-//  all copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-//  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-//  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-//  DEALINGS IN THE SOFTWARE.
-
-/* code */
-
-
 #include<iostream>
 
 struct arr_index
@@ -34,11 +9,11 @@ struct arr_index
 
 arr_index sol3_nLgn(int arr[][5],int max_row ,int max_col, int curr_row, int curr_col)
 {   
-    // int arr[5][5] = {{1,2,3,4,5},
-    //                  {8,2,9,1,4},
-    //                  {0,9,2,1,7},
-    //                  {6,3,4,1,2},
-    //                  {2,7,9,3,5}};
+    // 2 dimensional
+    // Find a peak in the array.
+    // Complexity : O(nLog n)
+    // Solution : Divide and Conquer
+
     arr_index result;
     int mid_row = curr_row/2;
     curr_row = mid_row;
@@ -122,7 +97,7 @@ int main()
                      {2,7,9,3,5}};
     arr_index result;
     result = sol3_nLgn(arr, 5, 5, 5, 5);
-    std::cout<<"SOL3 2D: O(LogN)"<<std::endl;
+    std::cout<<"SOL3 2D: O(nLogN)"<<std::endl;
     std::cout<<"Peek pos: "<<std::endl;
     std::cout<<"row: "<<result.row<<" col: "<<result.col<<std::endl;
     std::cout<<"Value: "<<arr[result.row][result.col]<<std::endl;
